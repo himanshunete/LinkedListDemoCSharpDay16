@@ -127,6 +127,27 @@ namespace NUnitTestProject
             Assert.True(result);
         }
 
+        /// <summary>
+        /// TC-7 Test For Search method
+        /// </summary>
+        [Test]
+        public void Given3Number_WhenSearched_ShouldPassTheLinkedListTest()
+        {
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(70);
+            MyLinkedList myLinkedList = new MyLinkedList();
+            myLinkedList.Add(myThirdNode);
+            myLinkedList.Add(mySecondNode);
+            myLinkedList.Add(myFirstNode);
+            myLinkedList.Search(mySecondNode);
+            myLinkedList.PrintMyNodes();
+            bool result = myLinkedList.head.Equals(myFirstNode) &&
+                     myLinkedList.head.getNext().Equals(mySecondNode) &&
+                     myLinkedList.tail.Equals(myThirdNode);
+            Assert.True(result);
+        }
+
 
 
 

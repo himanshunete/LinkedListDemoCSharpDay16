@@ -105,6 +105,22 @@ namespace LinkedListCSharp
 			return tempNode;
 		}
 
+		/// <summary>
+		/// UC-7 Create Search method
+		/// </summary>
+		/// <param name="myNode"></param>
+		public void Search(MyNode myNode)
+		{
+			MyNode tempNode = head;
+			while (tempNode.getNext() != myNode)
+			{
+				tempNode = tempNode.getNext();
+			}
+			tempNode = tempNode.getNext();
+			Console.WriteLine("Searched Element is: " + tempNode.getKey());
+
+		}
+
 		public void PrintMyNodes()
 		{
 			StringBuilder myNodes = new StringBuilder("My Nodes: ");

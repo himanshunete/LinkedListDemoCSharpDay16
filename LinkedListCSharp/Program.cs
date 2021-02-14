@@ -7,7 +7,6 @@ namespace LinkedListCSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List");
-
             MyNode myFirstNode = new MyNode(56);
             MyNode mySecondNode = new MyNode(30);
             MyNode myThirdNode = new MyNode(70);
@@ -15,7 +14,7 @@ namespace LinkedListCSharp
             myLinkedList.Add(myThirdNode);
             myLinkedList.Add(mySecondNode);
             myLinkedList.Add(myFirstNode);
-            myLinkedList.PopLast();
+            myLinkedList.Search(myThirdNode);
             myLinkedList.PrintMyNodes();
         }
     }
