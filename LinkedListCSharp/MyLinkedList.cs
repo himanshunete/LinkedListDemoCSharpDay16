@@ -83,6 +83,28 @@ namespace LinkedListCSharp
 			return tempNode;
 		}
 
+		/// <summary>
+		/// UC-6 Create PopLast method
+		/// </summary>
+		/// <returns></returns>
+		public MyNode PopLast()
+		{
+//			this.tail = null;
+			MyNode tempNode = this.head;
+//			tempNode = tempNode.getNext();
+//			this.tail = tempNode;
+
+			while (!tempNode.getNext().Equals(tail))
+			{
+				tempNode = tempNode.getNext();
+			}
+			this.tail = tempNode;
+			tempNode = this.tail.getNext();
+			tempNode = null;
+
+			return tempNode;
+		}
+
 		public void PrintMyNodes()
 		{
 			StringBuilder myNodes = new StringBuilder("My Nodes: ");

@@ -107,5 +107,28 @@ namespace NUnitTestProject
             Assert.True(result);
         }
 
+        /// <summary>
+        /// TC-6 Test For PopLast method
+        /// </summary>
+        [Test]
+        public void Given3Number_WhenDeletedLastElement_ShouldPassTheLinkedListTest()
+        {
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(70);
+            MyLinkedList myLinkedList = new MyLinkedList();
+            myLinkedList.Add(myFirstNode);
+            myLinkedList.Add(mySecondNode);
+            myLinkedList.Add(myThirdNode);
+            myLinkedList.PopLast();
+            myLinkedList.PrintMyNodes();
+            bool result = myLinkedList.head.Equals(myFirstNode) &&
+                             myLinkedList.tail.Equals(mySecondNode);
+            Assert.True(result);
+        }
+
+
+
+
     }
 }

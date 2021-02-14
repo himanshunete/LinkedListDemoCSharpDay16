@@ -12,10 +12,10 @@ namespace LinkedListCSharp
             MyNode mySecondNode = new MyNode(30);
             MyNode myThirdNode = new MyNode(70);
             MyLinkedList myLinkedList = new MyLinkedList();
-            myLinkedList.Append(myFirstNode);
-            myLinkedList.Append(mySecondNode);
-            myLinkedList.Append(myThirdNode);
-            myLinkedList.Pop();
+            myLinkedList.Add(myThirdNode);
+            myLinkedList.Add(mySecondNode);
+            myLinkedList.Add(myFirstNode);
+            myLinkedList.PopLast();
             myLinkedList.PrintMyNodes();
         }
     }
