@@ -21,6 +21,7 @@ namespace NUnitTestProject
         [Test]
         public void Test1()
         {
+
             myFirstNode.setNext(mySecondNode);
             mySecondNode.setNext(myThirdNode);
             bool result = myFirstNode.getNext().Equals(mySecondNode) &&
