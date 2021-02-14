@@ -61,6 +61,27 @@ namespace LinkedListCSharp
 			}
 
 		}
+		/// <summary>
+		/// UC-4 Create Insert method
+		/// </summary>
+		/// <param name="myNode"></param>
+		/// <param name="newNode"></param>
+		public void Insert(MyNode myNode, MyNode newNode)
+		{
+			this.head.setNext(myNode);
+			myNode.setNext(newNode);
+		}
+
+		/// <summary>
+		/// UC-5 Create pop method
+		/// </summary>
+		/// <returns></returns>
+		public MyNode Pop()
+		{
+			MyNode tempNode = this.head;
+			this.head = head.getNext();
+			return tempNode;
+		}
 
 		public void PrintMyNodes()
 		{
