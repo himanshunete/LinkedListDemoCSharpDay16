@@ -122,6 +122,36 @@ namespace LinkedListCSharp
 
 		}
 
+		/// <summary>
+		/// UC-9 Delete New Inserted Element
+		/// </summary>
+		/// <param name="deleteNode"></param>
+		public void Delete(MyNode deleteNode)
+		{
+			MyNode tempNode1 = head;
+			while (tempNode1.getNext() != deleteNode)
+			{
+				tempNode1 = tempNode1.getNext();
+			}
+			MyNode tempNode2 = tempNode1;
+			tempNode1 = tempNode1.getNext();
+			tempNode1 = tempNode1.getNext();
+			tempNode2.setNext(tempNode1);
+		}
+
+
+		public void Size(MyNode head)
+		{
+			int count = 0;
+			MyNode node = head;
+			while (node != null)
+			{
+				count++;
+				node = node.getNext();
+			}
+			Console.WriteLine("Size of LinkedList is: " + count);
+		}
+
 		public void PrintMyNodes()
 		{
 			StringBuilder myNodes = new StringBuilder("My Nodes: ");

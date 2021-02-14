@@ -13,13 +13,16 @@ namespace LinkedListCSharp
             MyNode myFourthNode = new MyNode(70);
 
             MyLinkedList myLinkedList = new MyLinkedList();
-            myLinkedList.Add(mySecondNode);
-            myLinkedList.Add(myFirstNode);
+            myLinkedList.Append(myFirstNode);
+            myLinkedList.Append(mySecondNode);
+            myLinkedList.Append(myThirdNode);
             myLinkedList.Append(myFourthNode);
-            myLinkedList.Search(mySecondNode);
             myLinkedList.PrintMyNodes();
-            myLinkedList.Insert(mySecondNode, myThirdNode);
+            myLinkedList.Search(myThirdNode);
             myLinkedList.PrintMyNodes();
+            myLinkedList.Delete(myThirdNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Size(myFirstNode);
         }
     }
 }

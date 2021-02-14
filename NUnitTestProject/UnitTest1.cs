@@ -174,6 +174,33 @@ namespace NUnitTestProject
             Assert.True(result);
         }
 
+        /// <summary>
+        /// TC-9 Test for Deleted Element
+        /// </summary>
+        public void Given3Number_ToDeleteElement40__ShouldPassTheLinkedListTest()
+        {
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(40);
+            MyNode myFourthNode = new MyNode(70);
+
+            MyLinkedList myLinkedList = new MyLinkedList();
+            myLinkedList.Append(myFirstNode);
+            myLinkedList.Append(mySecondNode);
+            myLinkedList.Append(myThirdNode);
+            myLinkedList.Append(myFourthNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Search(myThirdNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Delete(myThirdNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Size(myFirstNode);
+            bool result = myLinkedList.head.Equals(myFirstNode) &&
+                             myLinkedList.head.getNext().Equals(mySecondNode) &&
+                             myLinkedList.tail.Equals(myFourthNode);
+            Assert.True(result);
+        }
+
 
 
 
