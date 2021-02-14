@@ -9,12 +9,16 @@ namespace LinkedListCSharp
             Console.WriteLine("Welcome to Linked List");
             MyNode myFirstNode = new MyNode(56);
             MyNode mySecondNode = new MyNode(30);
-            MyNode myThirdNode = new MyNode(70);
+            MyNode myThirdNode = new MyNode(40);
+            MyNode myFourthNode = new MyNode(70);
+
             MyLinkedList myLinkedList = new MyLinkedList();
-            myLinkedList.Add(myThirdNode);
             myLinkedList.Add(mySecondNode);
             myLinkedList.Add(myFirstNode);
-            myLinkedList.Search(myThirdNode);
+            myLinkedList.Append(myFourthNode);
+            myLinkedList.Search(mySecondNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Insert(mySecondNode, myThirdNode);
             myLinkedList.PrintMyNodes();
         }
     }

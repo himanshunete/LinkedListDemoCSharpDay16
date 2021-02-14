@@ -148,6 +148,32 @@ namespace NUnitTestProject
             Assert.True(result);
         }
 
+        /// <summary>
+        /// TC-8 Test For Insertion of New Element
+        /// </summary>
+        [Test]
+        public void Given3Number_ToInsert40After30__ShouldPassTheLinkedListTest()
+        {
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(40);
+            MyNode myFourthNode = new MyNode(70);
+
+            MyLinkedList myLinkedList = new MyLinkedList();
+            myLinkedList.Add(mySecondNode);
+            myLinkedList.Add(myFirstNode);
+            myLinkedList.Append(myFourthNode);
+            myLinkedList.Search(mySecondNode);
+            myLinkedList.PrintMyNodes();
+            myLinkedList.Insert(mySecondNode, myThirdNode);
+            myLinkedList.PrintMyNodes();
+            bool result = myLinkedList.head.Equals(myFirstNode) &&
+                             myLinkedList.head.getNext().Equals(mySecondNode) &&
+                             myLinkedList.head.getNext().getNext().Equals(myThirdNode) &&
+                             myLinkedList.tail.Equals(myFourthNode);
+            Assert.True(result);
+        }
+
 
 
 

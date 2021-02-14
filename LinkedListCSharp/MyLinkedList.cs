@@ -68,8 +68,9 @@ namespace LinkedListCSharp
 		/// <param name="newNode"></param>
 		public void Insert(MyNode myNode, MyNode newNode)
 		{
-			this.head.setNext(myNode);
+			MyNode tempNode = myNode.getNext();
 			myNode.setNext(newNode);
+			newNode.setNext(tempNode);
 		}
 
 		/// <summary>
