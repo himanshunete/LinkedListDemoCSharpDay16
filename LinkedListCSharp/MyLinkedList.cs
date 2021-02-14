@@ -152,6 +152,105 @@ namespace LinkedListCSharp
 			Console.WriteLine("Size of LinkedList is: " + count);
 		}
 
+		public void Sort()
+		{
+			MyNode tempNode = this.head;
+//			MyNode index = null;
+//			int temp;
+//			int current = tempNode.getKey();
+//			if (this.head == null)
+//			{
+//				return;
+//			}
+//			else
+//			{
+//				while (tempNode.getNext() != null)
+//				{
+//					index = tempNode.getNext();
+//					int	indexKey = index.getKey();
+//
+//					while (index != null)
+//					{
+//						if (current > indexKey)
+//						{
+//							temp = current;
+//							current = indexKey;
+//							indexKey = temp;
+//						}
+//						Console.WriteLine(indexKey);
+//						index = index.getNext();
+//					}
+//					tempNode = tempNode.getNext();
+//				}
+//			}
+//			PrintMyNodes();
+
+
+
+//			MyNode tempNode1;
+//			MyNode tempNode2;
+//			MyNode tempNode3;
+			int key;
+//			int key1;
+//			int key2;
+//			int key3;
+			int[] keyArray = new int[4];
+			MyNode[] node = new MyNode[4];
+        	int temp;
+			for (int i = 0; i < 4 ; i++)
+			{
+				key = tempNode.getKey();
+				node[i] = tempNode;
+				keyArray[i] = key;
+				tempNode = tempNode.getNext();
+				Console.WriteLine(node[i]);
+				Console.WriteLine(keyArray[i]);
+			}
+
+			for ( int i=0; i < 4;i++)
+            {
+				for ( int j=0; j<3;j++)
+                {
+					if ( keyArray[j] > keyArray[j+1])
+                    {
+						temp = keyArray[j];
+						keyArray[j] = keyArray[j + 1];
+						keyArray[j + 1] = temp;
+                    }
+                }
+            }
+
+	//		MyNode firstNode = new MyNode(keyArray[0]);
+//			MyNode secondNode = new MyNode(keyArray[1]);
+//			MyNode thirdNode = new MyNode(keyArray[2]);
+//			MyNode fourthNode = new MyNode(keyArray[3]);
+//
+//			Append(firstNode);
+//			Append(secondNode);
+//			Append(thirdNode);
+//			Append(fourthNode);
+			PrintMyNodes();
+//		
+
+
+			//			key = tempNode.getKey();
+			//			tempNode1 = tempNode.getNext();
+			//			tempNode2 = tempNode1.getNext();
+			//			tempNode3 = tempNode2.getNext();
+			//			key2 = tempNode2.getKey();
+			//			key1 = tempNode1.getKey();
+			//			key3 = tempNode3.getKey();
+			//			
+			//			MyNode firstNode = new MyNode()
+			//
+			//			Append(tempNode1);
+			//			Append(tempNode2);
+			//			Append(tempNode);
+			//			Append(tempNode3);
+			//			PrintMyNodes();
+
+		}
+
 		public void PrintMyNodes()
 		{
 			StringBuilder myNodes = new StringBuilder("My Nodes: ");

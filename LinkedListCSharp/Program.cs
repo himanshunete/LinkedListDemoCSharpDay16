@@ -17,12 +17,9 @@ namespace LinkedListCSharp
             myLinkedList.Append(mySecondNode);
             myLinkedList.Append(myThirdNode);
             myLinkedList.Append(myFourthNode);
-            myLinkedList.PrintMyNodes();
-            myLinkedList.Search(myThirdNode);
-            myLinkedList.PrintMyNodes();
-            myLinkedList.Delete(myThirdNode);
-            myLinkedList.PrintMyNodes();
-            myLinkedList.Size(myFirstNode);
+            myLinkedList.Sort();
+        
+         
         }
     }
 }
