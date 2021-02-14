@@ -39,8 +39,30 @@ namespace LinkedListCSharp
 
 
 		}
+		/// <summary>
+		/// UC-3 Create Append Method
+		/// </summary>
+		/// <param name="newNode"></param>
+		public void Append(MyNode newNode)
+		{
+			if (this.head == null)
+			{
+				this.head = newNode;
+			}
+			if (this.tail == null)
+			{
+				this.tail = newNode;
+			}
+			else
+			{
+				MyNode tempNode = this.tail;
+				this.tail = newNode;
+				tempNode.setNext(newNode);
+			}
 
-		public void printMyNodes()
+		}
+
+		public void PrintMyNodes()
 		{
 			StringBuilder myNodes = new StringBuilder("My Nodes: ");
 			MyNode tempNode = head;

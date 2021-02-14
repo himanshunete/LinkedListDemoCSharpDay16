@@ -6,18 +6,16 @@ namespace LinkedListCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            MyNode myFirstNode;
-            MyNode mySecondNode;
-            MyNode myThirdNode;
-            myFirstNode = new MyNode(70);
-            mySecondNode = new MyNode(30);
-            myThirdNode = new MyNode(56);
+            Console.WriteLine("Welcome to Linked List");
+
             MyLinkedList myLinkedList = new MyLinkedList();
-            myLinkedList.Add(myFirstNode);
-            myLinkedList.Add(mySecondNode);
-            myLinkedList.Add(myThirdNode);
-            myLinkedList.printMyNodes();
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(70);
+            myLinkedList.Append(myFirstNode);
+            myLinkedList.Append(mySecondNode);
+            myLinkedList.Append(myThirdNode);
+            myLinkedList.PrintMyNodes();
         }
     }
 }

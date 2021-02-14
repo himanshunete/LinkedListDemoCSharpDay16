@@ -28,7 +28,7 @@ namespace NUnitTestProject
 
 
         /// <summary>
-        /// TC-2 Test Linked List
+        /// TC-2 Test Linked List for Add method
         /// </summary>
         [Test]
         public void Given3Number_WhenAddedToLinkedList_ShouldBeAddedToTop()
@@ -40,12 +40,33 @@ namespace NUnitTestProject
             myLinkedList.Add(myFirstNode);
             myLinkedList.Add(mySecondNode);
             myLinkedList.Add(myThirdNode);
-            myLinkedList.printMyNodes();
+            myLinkedList.PrintMyNodes();
             bool result = myLinkedList.head.Equals(myThirdNode) &&
                              myLinkedList.head.getNext().Equals(mySecondNode) &&
                              myLinkedList.tail.Equals(myFirstNode);
             Assert.True(result);
         }
+
+        /// <summary>
+        /// TC-3 Test for Append method
+        /// </summary>
+        public void Given3Number_WhenAppendedToLinkedList_ShouldBeAppendedToLast()
+        {
+            MyNode myFirstNode = new MyNode(56);
+            MyNode mySecondNode = new MyNode(30);
+            MyNode myThirdNode = new MyNode(70);
+            MyLinkedList myLinkedList = new MyLinkedList();
+            myLinkedList.Append(myFirstNode);
+            myLinkedList.Append(mySecondNode);
+            myLinkedList.Append(myThirdNode);
+            myLinkedList.PrintMyNodes();
+            bool result = myLinkedList.head.Equals(myFirstNode) &&
+                             myLinkedList.head.getNext().Equals(mySecondNode) &&
+                             myLinkedList.tail.Equals(myThirdNode);
+            Assert.True(result);
+        }
+
+
 
     }
 }
