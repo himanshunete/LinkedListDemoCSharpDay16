@@ -6,6 +6,7 @@ namespace LinkedListCSharp
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to Linked List");
             MyNode myFirstNode = new MyNode(56);
             MyNode mySecondNode = new MyNode(30);
